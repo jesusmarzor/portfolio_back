@@ -215,10 +215,10 @@ body.dark .footer .rrss__path { fill: #fbfbfb; }
 @media (max-width: 1130px) { .portfolio__projects { grid-template-columns: repeat(2, 1fr); -ms-grid-columns: repeat(2, 1fr); } }
 
 @media (max-width: 1062px) { body.dark .home .presentation__writeme:hover { color: #2b2c2c; background-color: #feb633; }
-  body.dark .home .home__resize { background-image: url("../css/img/fondo_dark.png"); }
+  body.dark .home .home__resize { background-image: url("../css/img/fondo_dark.webp"); }
   body.dark .home .profile { background-color: #303131; border-color: #303131; }
   .home { height: 27.5rem; }
-  .home__resize { background-image: url("../css/img/fondo_light.png"); background-repeat: no-repeat; background-size: cover; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: inherit; -ms-flex-pack: inherit; justify-content: inherit; -webkit-box-align: inherit; -ms-flex-align: inherit; align-items: inherit; margin: auto; }
+  .home__resize { background-image: url("../css/img/fondo_light.webp"); background-repeat: no-repeat; background-size: cover; height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: inherit; -ms-flex-pack: inherit; justify-content: inherit; -webkit-box-align: inherit; -ms-flex-align: inherit; align-items: inherit; margin: auto; }
   .home .presentation { margin-top: 5rem; margin-left: 5rem; }
   .home .presentation__p { font-weight: bold; font-size: 1.2rem; margin-bottom: 1rem; }
   .home .presentation__writeme:hover { color: #fbfbfb; background-color: #feb633; }
