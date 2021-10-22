@@ -1,0 +1,16 @@
+@keyframes sun {
+    from{
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+@keyframes moon {
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}

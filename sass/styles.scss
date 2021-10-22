@@ -1,0 +1,712 @@
+@import "variables";
+@import "fonts";
+@import "mixins";
+@import "keyframes";
+*,*:after,*:before{
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
+}
+.aparition{
+    display: block;
+}
+.desaparition{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+input,
+textarea{
+    outline: none;
+    border: none;
+}
+body{
+    font-family:Poppins;
+    color: $gray;
+    background-color: white;
+    &.dark{
+        color: $off_white;
+        background-color: $white-black;
+        .header{
+            background-color: $white-black;
+            .nav{
+                &__a{
+                    color: white;
+                    &:hover {
+                        color: $orange;
+                    }
+                    &.active {
+                        color: $orange;
+                        background-size: 80% 2px;
+                    }
+                }
+            }
+            .mode{
+                &__path{
+                    fill: $off_white;
+                }
+            }
+        }
+        .home{
+            background-color: $off_white-black;
+            .presentation{
+                &__h1{
+                    color: $off_white;
+                }
+                &__writeme{
+                    color: $off_white-black;
+                    &:hover{
+                        color: $orange;
+                    }
+                }
+            }
+        }
+        .about{
+            & .about__h2{
+                color: $off_white;
+            }
+            .button{
+                &__projects{
+                    color: $white-black;
+                    &:hover{
+                        color: $orange;
+                    }
+                }
+                &__cv{
+                    &:hover{
+                        color: $white-black;
+                    }
+                }
+            }
+        }
+        .portfolio{
+            background-color: $off_white-black;
+            & .portfolio__h2{
+                color: white;
+            }
+            .project{
+                background-color: $white-black;
+                box-shadow: 0 0 .5rem rgba(255,255,255,.3);
+                &__title{
+                    color: white;
+                }
+                &__description{
+                    scrollbar-color:  $off_white transparent;
+                }
+                .button{
+                    &__github{
+                        color: $white-black;
+                        &:hover{
+                            color: $white-black;
+                        }
+                    }
+                    &__demo:hover{
+                        color: $white-black;
+                    }
+                }
+            }
+        }
+        .contact{
+            & .contact__h2{
+                color: white;
+            }
+            .form{
+                &__button{
+                    color: $white-black;
+                    &:hover{
+                        color: $orange;
+                    }
+                }
+            }
+        }
+        .footer{
+            background-color: $off_white-black;
+            .rrss{
+                &__path{
+                    fill: $off_white;
+                }
+            }
+        }
+    }
+}
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+    height: 4.5rem;
+    transition: height 500ms;
+    .menu{
+        display: none;
+    }
+    .nav{
+        max-width: 1200px;
+        opacity: 1;
+        pointer-events: auto;
+        @include flex(row,center,center,auto);
+        position: relative;
+        &__ul{
+            @include flex(row,center,center,auto);
+            line-height: 4.5rem;
+        }
+        &__li{
+            list-style: none;
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+        &__a{
+            font-size: 1rem;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            color: $gray_dark;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 50% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .3s;
+            &:hover {
+                color: $orange;
+            }
+            &.active {
+                color: $orange;
+                background-size: 80% 2px;
+            }
+        }
+    }   
+    .mode{
+        position: absolute;
+        right: 0;
+        width: 2rem;
+        height: 2rem;
+        @include flex(row,center,center,0);
+        margin-right: 1rem;
+        &__light, &__dark{
+            width: 1.8rem;
+            height: 1.8rem;
+            cursor: pointer; 
+        }
+        &__light{
+            animation: sun .5s forwards;
+        }
+        &__dark{
+            animation: moon .5s forwards;
+        }
+        &__path{
+            fill: $black;
+        }
+    }
+}
+.home{
+    background-color: $off_white;
+    margin-top: 4.5rem;
+    &__resize{
+        max-width: 1200px;
+        @include flex(row,space-between,center,auto);
+    }
+    .presentation{
+        padding-bottom: 1rem;
+        margin-left: 4rem;
+        &__h1{
+            font-family: PoppinsBold;
+            font-weight: bold;
+            color: $gray_dark;
+            font-size: 3rem;
+            &::before{
+                content:"Soy "
+            }
+        }
+        &__p{
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        &__writeme{
+            font-size: 1.2rem;
+            @include button($off_white,$orange,$orange);
+            &:hover{
+                color: $orange;
+                background-color: transparent;
+            }
+        }
+    }
+    .profile{
+        @include flex(row,center,flex-end,0);
+        margin-top: 4rem;
+        margin-right: 4rem;
+    }
+}
+.about{
+    max-width: 1200px;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    @include flex(row,center,center,auto);
+    &__title{
+        @include flex(row,flex-end,center,auto);
+        width: 70%;
+        @include underline_title(100%);
+    }
+    &__h2{ 
+        font-size: 2.5rem;
+        font-family: PoppinsSemiBold;
+        color: $gray_dark;
+        font-weight: bold;
+    }
+    .content{
+        padding-left: 5rem;
+        padding-right: 5rem;
+        &__p{
+            font-size: 1rem;
+        }
+        .button{
+            margin-top: 2rem;
+            &__projects{
+                font-size: 1rem;
+                @include button(white,$orange,$orange);
+                &:hover{
+                    color: $orange;
+                    background-color: transparent;
+                }
+            }
+            &__cv{
+                font-size: 1rem;
+                @include button($orange,transparent,$orange);
+                &:hover{
+                    color: white;
+                    background-color: $orange;
+                }
+            }
+        }
+    }
+}
+.portfolio{
+    background-color: $off_white;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    &__resize{
+        max-width: 1200px;
+        @include flex(column,center,center,auto);
+    }
+    &__title{
+        @include underline_title(100%);
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+    &__h2{
+        font-size: 2.5rem;
+        font-family: PoppinsSemiBold;
+        color: $gray_dark;
+        font-weight: bold;
+    }
+    &__projects{
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3,1fr);
+        -ms-grid-columns: repeat(3,1fr);
+        align-items: center;
+    }
+    .project{
+        margin: 2rem auto;
+        border-radius: 1rem;
+        width: 22rem;
+        height: 27rem;
+        background-color: white;
+        box-shadow: 0 0 .5rem rgba(0,0,0,.3);
+        overflow: hidden;
+        &__img{
+            width: 100%;
+            
+        }
+        &__title{
+            font-family: PoppinsSemiBold;
+            color: $gray_dark;
+            font-weight: bold;
+            padding: .5rem;
+        }
+        &__description{
+            padding: .5rem;
+            height: 6rem;
+            overflow: scroll;
+            scrollbar-color:  $gray transparent;
+        }
+        .button{
+            @include flex(row,center,center,auto);
+            height: 5rem;
+            font-size: 1rem;
+            &__github{
+                @include button(white,transparent,transparent);
+            }
+            &__demo{
+                margin-left: .5rem;
+                @include button(transparent,transparent,transparent);
+                &:hover{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.contact{
+    max-width: 1200px;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    @include flex(column,center,center,auto);
+    &__title{
+        margin-bottom: 4rem;
+        text-align: center;
+        @include underline_title(100%)
+    }
+    &__h2{
+        font-size: 2.5rem;
+        font-family: PoppinsSemiBold;
+        color: $gray_dark;
+        font-weight: bold;
+    }
+    .form{
+        position: relative;
+        width: 500px;
+        padding-bottom: 4rem;
+        transition: width 500ms linear;
+        &__name,
+        &__email,
+        &__message{
+            @include flex(column,center,inherit,auto);
+        }
+        &__label{
+            margin-top: 1rem;
+            margin-bottom: .5rem;
+            font-size: 1.5rem;
+        }
+        &__input,
+        &__textarea{
+            font-family: Poppins;
+            color: $gray_dark;
+            border: .1rem solid #ced4da;
+            font-size: 1rem;
+            padding: .3rem;
+            height: 3rem;
+            border-radius: .2rem;
+            transition: box-shadow 300ms ease;
+        }
+        &__input:focus,
+        &__textarea:focus{
+            box-shadow: 1px 1px 0px 1px $orange;
+        }
+        &__textarea{
+            height: 6rem;
+        }
+        &__button{
+            margin-top: 1rem;
+            font-size: 1rem;
+            @include button(white,$orange,$orange);
+            &:hover{
+                color: $orange;
+                background-color: transparent;
+            }
+        }
+        &__error{
+            color: #e14b41;
+            font-size: 1rem;
+        }
+        &__answer{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    }
+}
+.footer{
+    padding-top: 2rem;
+    background-color: $off_white;
+    .rrss{
+        padding-bottom: 1rem;
+        @include flex(row,center,center,0);
+        &__li{
+            list-style: none;
+            margin-right: .6rem;
+            margin-left: .6rem
+        }
+        &__a{
+            @include flex(row,center,center,auto);
+            &:hover{
+                .rrss__svg{
+                        transform: scale(1.2);
+                }
+            }
+        }
+        &__svg{
+            width: 1.8rem;
+            height: 1.8rem;
+            transition: transform 300ms ease;
+        }
+        &__path{
+            fill: $gray_dark;
+        }
+        &__li:hover &__path{
+            fill: white;
+        }
+    }
+    &__copy{
+        text-align: center;
+        padding: 1rem;
+        border-top: 1px solid #e1e6f1;;
+    }
+}
+@media (max-width: 1130px){
+    .portfolio{
+        &__projects{
+            grid-template-columns: repeat(2,1fr);
+            -ms-grid-columns: repeat(2,1fr);
+        }
+    }
+}
+@media (max-width: 1062px){
+    body{
+        &.dark{
+            .home{
+                .presentation{
+                    &__writeme:hover{
+                        color: $off_white-black;
+                        background-color: $orange;
+                    }
+                }
+                & .home__resize{
+                    background-image: url('../css/img/fondo_dark.png');
+                }
+                & .profile{
+                    background-color: $white-black;
+                    border-color: $white-black;
+                }
+            }
+        }
+    }
+    .home{
+        height: 27.5rem;
+        &__resize{
+            background-image: url('../css/img/fondo_light.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            @include flex(column,inherit,inherit,auto);
+        }
+        .presentation{
+            margin-top: 5rem;
+            margin-left: 5rem;
+            &__p{
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-bottom: 1rem;
+            }
+            &__writeme:hover{
+                color: $off_white;
+                background-color: $orange;
+            }
+        }
+        .profile{
+            @include position(absolute,20em,0,0,0);
+            margin: 0 auto;
+            align-items: flex-start;
+            border-radius: 100%;
+            border: 1px solid white;
+            overflow: hidden;
+            width: 20rem;
+            height: 20rem;
+            background-color: white;
+            &__img{
+                align-items: center;
+                width: 22rem;
+            }
+        }
+    }
+    .about{
+        padding-top: 6rem;
+        margin-top: 6rem;
+    }
+}
+@media (max-width: 930px){
+    .about{
+        flex-direction: column;
+        &__title{
+            display: block;
+            width: auto;
+        }
+        .content{
+            padding-top: 2rem;
+        }
+    }
+}
+@media (max-width: 808px){
+    .portfolio{
+        &__projects{
+            grid-template-columns: repeat(1,1fr);
+            -ms-grid-columns: repeat(1,1fr);
+        }
+    }
+}
+@media (max-width: 600px){
+    body{
+        &.dark{
+            .menu{
+                &__burger{
+                    background-color: $off_white;
+                    &::before,
+                    &::after{
+                        background-color: $off_white;
+                    }
+                }
+            }
+        }
+    }
+    .header{
+        position: absolute;
+        height: 3rem;
+        &.deploy{
+            height: 28rem;
+        }
+        .nav{
+            opacity: 0;
+            pointer-events: none;
+            flex-direction: column;
+            padding-bottom: 2rem;
+            &__ul{
+                flex-direction: column;
+            }
+            &.desopacity{
+                opacity: 1;
+                pointer-events: auto;
+                transition: opacity 500ms ease-in-out;
+            }
+        }
+        .mode{
+            position: relative;
+            margin: auto;
+            margin-top: 1rem;
+        }
+        .menu{
+            position: relative;
+            @include flex(row,center,center,auto);
+            width: 25px;
+            height: 3rem;
+            cursor: pointer;
+            transition: all 500ms ease-in-out;
+            margin-left: auto;
+            margin-right: 1rem;
+            &__burger{
+                width: 25px;
+                height: 0.19rem;
+                background: $black;
+                border-radius: 5px;
+                transition: all 500ms ease-in-out;
+                &::before,
+                &::after{
+                    content:'';
+                    position: absolute;
+                    width: 25px;
+                    height: 0.19rem;
+                    background: $black;
+                    border-radius: 5px;
+                    transition: all 500ms ease-in-out;
+                }
+                &::before{
+                    transform: translateY(-8px);
+                }
+                &::after{
+                    transform: translateY(8px);
+                }
+            }
+            &.open{
+                & .menu__burger{
+                    transform: translateX(-3.125rem);
+                    background: transparent;
+                    box-shadow: none;
+                    &::before{
+                        transform: rotate(45deg) translate(2.188rem,-2.188rem);
+                    }
+                    &::after{
+                        transform: rotate(-45deg) translate(2.188rem,2.188rem);
+                    }
+                }
+            }
+        }
+    }
+    .home{
+        height: 20rem;
+        margin-top: 3rem;
+        .presentation{
+            margin-top: 2rem;
+            margin-left: 0;
+            text-align: center;
+            &__h1{
+                &::before{
+                    content: "";
+                }
+            }
+            &__writeme{
+                display: none;
+            }
+        }
+        .profile{
+            top: 14rem;
+            width: 15rem;
+            height: 15rem;
+            &__img{
+                width: 17rem;
+            }
+        }
+    }
+    .portfolio{
+        padding-top: 2rem;
+        margin-top: 2rem;
+    }
+    .about{
+        padding-top: 2rem;
+        margin-top: 8rem;
+        &__title{
+            margin-top: 0;
+        }
+    }
+    .contact{
+        padding-top: 2rem;
+        .form{
+            width: 300px;
+        }
+    }
+}
+@media (max-width: 500px){
+    .home{
+        height: 17rem;
+        .profile{
+            top: 11.5rem;
+            width: 14rem;
+            height: 14rem;
+            &__img{
+                width: 16rem;
+            }
+        }
+        .presentation{
+            &__h1{
+                font-size: 2.3rem;
+            }
+            &__p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+    .about{
+        .content{
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}
+@media (max-width: 360px){
+    .portfolio{
+        .project{
+            width: 90vw;
+            height: 125vw;
+        }
+    }
+}

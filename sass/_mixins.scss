@@ -1,0 +1,34 @@
+@mixin underline_title($position){
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: $position 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    color: $orange;
+    transition: background-size .3s;
+    background-size: 4rem .3rem;
+}
+@mixin position($position,$top,$right,$bottom,$left){
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+@mixin flex($direction,$justify,$align,$margin){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    margin: $margin;
+}
+@mixin button($color-letter, $color-background, $color-border){
+    color: $color-letter;
+    background-color: $color-background;
+    border: 1px solid $color-border;
+    padding: .5rem .7rem .5rem .7rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: background-color 500ms ease;
+}
