@@ -34,8 +34,6 @@ body.dark .header { background-color: #303131; }
 
 body.dark .header .nav__a { color: white; }
 
-body.dark .header .nav__a:hover { color: #feb633; }
-
 body.dark .header .nav__a.active { color: #feb633; background-size: 80% 2px; }
 
 body.dark .header .mode__path { fill: #fbfbfb; }
@@ -93,8 +91,6 @@ body.dark .footer .rrss__path { fill: #fbfbfb; }
 .header .nav__li { list-style: none; margin-right: 1rem; margin-left: 1rem; }
 
 .header .nav__a { font-size: 1rem; letter-spacing: 0.05em; font-weight: 600; color: #32333c; background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor)); background-image: linear-gradient(currentColor, currentColor); background-position: 50% 100%; background-repeat: no-repeat; background-size: 0% 2px; -webkit-transition: background-size .3s; transition: background-size .3s; }
-
-.header .nav__a:hover { color: #feb633; }
 
 .header .nav__a.active { color: #feb633; background-size: 80% 2px; }
 

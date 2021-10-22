@@ -33,9 +33,6 @@ body{
             .nav{
                 &__a{
                     color: white;
-                    &:hover {
-                        color: $orange;
-                    }
                     &.active {
                         color: $orange;
                         background-size: 80% 2px;
@@ -166,9 +163,6 @@ body{
             background-repeat: no-repeat;
             background-size: 0% 2px;
             transition: background-size .3s;
-            &:hover {
-                color: $orange;
-            }
             &.active {
                 color: $orange;
                 background-size: 80% 2px;
