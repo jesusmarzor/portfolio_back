@@ -34,9 +34,9 @@ const isFinal = () => {
     });
 }
 const selectMenu = (about,portfolio,contact,menu) => {
-    if(about.getBoundingClientRect().top > 1){
+    if(about.getBoundingClientRect().top > 1 && !isFinal()){
         activeElementMenu(menu[0],menu)
-    }else if(about.getBoundingClientRect().top <= 1 && portfolio.getBoundingClientRect().top > 1){
+    }else if(about.getBoundingClientRect().top <= 1 && portfolio.getBoundingClientRect().top > 1 && !isFinal()){
         activeElementMenu(menu[1],menu)
     }else if(portfolio.getBoundingClientRect().top <= 1 && contact.getBoundingClientRect().top > 1 && !isFinal()){
         activeElementMenu(menu[2],menu)
