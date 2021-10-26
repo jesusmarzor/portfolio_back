@@ -1,7 +1,7 @@
 [
     {
         "title": "Haley Dust",
-        "description": "Página maquetada en Visual Studio Code con HTML y SASS. Tambien he implementado BEM, una metodología ágil de desarrollo basada en componentes.",
+        "description": "Maquetada con HTML y SASS. Tambien he implementado BEM, una metodología de desarrollo basada en componentes.",
         "img": "./css/img/haley-dust.webp",
         "url__github": "https://github.com/jesusmarzor/Haley-Dust",
         "url__demo": "https://jesusmarzor.github.io/Haley-Dust/",
@@ -11,14 +11,14 @@
     },
     {
         "title": "Hospital Marzor",
-        "description": "Desarrollo de una aplicación web sencilla pero suficientemente completa de manera que el resultado final sea totalmente funcional y comparable a cualquier aplicación web real. Para ello usé HTML, CSS, PHP, MYSQL.",
+        "description": "Aplicación web hecha con HTML, Bootstrap, PHP y MYSQL. Suficientemente completa para que sea funcional. ",
         "img": "./css/img/hospital-marzor.webp",
         "url__github": "https://github.com/jesusmarzor/Hospital-Marzor",
         "color": "#008181"
     },
     {
         "title": "Armazon",
-        "description": "Página maquetada con HTML y CSS. La página no tiene funcionalidad, simplemente es una máquetación hecha a partir de una imagen.",
+        "description": "Maquetada con HTML y CSS. La página no tiene funcionalidad, está hecha a partir de una imagen.",
         "img": "./css/img/armazon.webp",
         "url__github": "https://github.com/jesusmarzor/Armazon",
         "url__demo": "https://jesusmarzor.com/Armazon/",
