@@ -690,9 +690,22 @@ body{
         }
     }
     .about{
+        &__p{
+            font-size: 2rem;
+        }
         .content{
             padding-left: 1rem;
             padding-right: 1rem;
+        }
+    }
+    .portfolio{
+        &__p{
+            font-size: 2rem;
+        }
+    }
+    .contact{
+        &__p{
+            font-size: 2rem;
         }
     }
 }

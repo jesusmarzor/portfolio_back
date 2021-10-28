@@ -265,7 +265,10 @@ body.dark .footer .rrss__path { fill: #fbfbfb; }
   .home .profile__img { width: 16rem; }
   .home .presentation__h1 { font-size: 2.3rem; }
   .home .presentation__p { font-size: 1.1rem; }
-  .about .content { padding-left: 1rem; padding-right: 1rem; } }
+  .about__p { font-size: 2rem; }
+  .about .content { padding-left: 1rem; padding-right: 1rem; }
+  .portfolio__p { font-size: 2rem; }
+  .contact__p { font-size: 2rem; } }
 
 @media (max-width: 360px) { .portfolio .project { width: 90vw; }
   .portfolio .project__description { max-height: none; } }
