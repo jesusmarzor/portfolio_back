@@ -1,20 +1,19 @@
 [
     {
+        "title": "To do list",
+        "description": "Aplicación web para aquellas personas que le guste organizarse y cumplir todo lo que se proponga. ",
+        "img": "./css/img/to-do-list.webp",
+        "url__github": "https://github.com/jesusmarzor/to-do-list",
+        "url__demo": "https://to-do-list.jesusmarzor.com",
+        "color": "#2a94f2"
+    },
+    {
         "title": "Haley Dust",
         "description": "Maquetada con HTML y SASS. Tambien he implementado BEM, una metodología de desarrollo basada en componentes.",
         "img": "./css/img/haley-dust.webp",
         "url__github": "https://github.com/jesusmarzor/Haley-Dust",
         "url__demo": "https://jesusmarzor.github.io/Haley-Dust/",
-        "content_order":"order-2 order-md-1 text-right",
-        "img_order": "order-1 order-md-2",
         "color": "#feb633"
-    },
-    {
-        "title": "Hospital Marzor",
-        "description": "Aplicación web hecha con HTML, Bootstrap, PHP y MYSQL. Suficientemente completa para que sea funcional. ",
-        "img": "./css/img/hospital-marzor.webp",
-        "url__github": "https://github.com/jesusmarzor/Hospital-Marzor",
-        "color": "#008181"
     },
     {
         "title": "Armazon",
